@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplex VyC - Alquiler temporario</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .variant { font-variant: small-caps; }
+        /* Sombras personalizadas para mejorar legibilidad sobre la imagen */
+        .shadow-text {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body class="m-0 p-0 box-border font-sans overflow-x-hidden">
+
+    <header class="w-screen h-screen bg-[url('img/uten01.jpg')] bg-center bg-cover relative flex flex-col">
+        
+        <nav class="backdrop-blur-sm bg-blue-950/40 from-80% to-transparent text-white variant min-h-25 flex flex-row justify-between items-center px-6 sm:flex-col lg:flex-row lg:justify-evenly relative z-50">
+            
+            <div class="flex items-center gap-3">
+            <img src="img/logo_edificio_2.gif" alt="Logo Duplex" class="w-[60px] h-[60px] object-contain">
+            
+            <h1 class="py-4 text-3xl font-bold">Dúplex<span class="text-yellow-400">VyC</span></h1>
+
+            </div>
+
+            <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+            <label for="menu-toggle" class="cursor-pointer sm:hidden block">
+                <img src="img/icon-menu-bar.png" alt="Menu" class="w-8 h-8 brightness-200">
+            </label>
+
+            <ul class="hidden peer-checked:flex flex-col absolute top-full left-0 w-full bg-blue-950/95 shadow-xl 
+                       sm:static sm:flex sm:flex-row sm:w-auto sm:bg-transparent sm:shadow-none sm:list-none sm:gap-3 lg:mb-0 transition-all duration-300"> 
+                <li class="border-b border-white/10 sm:border-none">
+                    <a href="index.html" class="block sm:inline-block text-white no-underline bg-white/10 hover:bg-white/30 w-full sm:w-28 p-3 text-center transition-all">Inicio</a>
+                </li>
+                <li class="border-b border-white/10 sm:border-none">
+                    <a href="nosotros.html" class="block sm:inline-block text-white no-underline bg-white/10 hover:bg-white/30 w-full sm:w-28 p-3 text-center transition-all">Nosotros</a>
+                </li>
+                <li class="border-b border-white/10 sm:border-none">
+                    <a href="galeria.html" class="block sm:inline-block text-white no-underline bg-white/10 hover:bg-white/30 w-full sm:w-28 p-3 text-center transition-all">Galería</a>
+                </li>
+                <li class="border-b border-white/10 sm:border-none">
+                    <a href="servicios.html" class="block sm:inline-block text-white no-underline bg-white/10 hover:bg-white/30 w-full sm:w-28 p-3 text-center transition-all">Servicios</a>
+                </li>
+                <li>
+                    <a href="contactenos.html" class="block sm:inline-block text-white no-underline bg-white/10 hover:bg-white/30 w-full sm:w-28 p-3 text-center transition-all">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="flex-grow flex justify-center items-center px-4">
+            <div class="text-center max-w-3xl text-white flex flex-col items-center gap-8 py-10">
+                
+                <h1 class="text-4xl md:text-6xl font-bold shadow-text leading-tight">
+                    Todo lo que necesitás, en un solo lugar                </h1>
+
+                <p class="text-xl md:text-2xl shadow-text max-w-2xl">
+                    Desde conectividad de alta velocidad hasta cocina completa, diseñamos un espacio funcional preparado para las exigencias de hoy.                </p>
+
+<div class="mt-8 w-full max-w-4xl">
+
+</div>
+
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <!--Servicios-->
+      
+<section id="servicios" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-blue-950 mb-4">Todo lo que necesitás, en un solo lugar</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto italic">
+                Diseñamos un espacio funcional y equipado con tecnología de punta para que tu única preocupación sea disfrutar.
+            </p>
+            <div class="w-24 h-1 bg-yellow-400 mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-blue-900 text-white p-8 rounded-3xl shadow-xl">
+                <h3 class="text-2xl font-bold mb-6 flex items-center gap-2 text-yellow-400">
+                    <i class="fa-solid fa-snowflake"></i> Climatización y Confort
+                </h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-wind text-yellow-400"></i>
+                        <span class="font-bold">Aire Acondicionado</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-fire-orange text-yellow-400"></i>
+                        <span class="font-bold">Calefacción</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-ban-smoking text-yellow-400"></i>
+                        <span class="font-bold">Ambiente libre de humo</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-users text-yellow-400"></i>
+                        <span class="font-bold">Habitaciones Familiares</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100">
+                <h3 class="text-xl font-bold text-blue-950 mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-house-chimney-window text-blue-600"></i> Exteriores y Recepción
+                </h3>
+                <ul class="space-y-4 text-gray-600">
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-fire-burner text-green-500"></i>
+                        <span>Zona con asador / parrilla</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-coins text-green-500"></i>
+                        <span>Cambio de moneda</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-comments text-green-500"></i>
+                        <span>Hablamos **Español e Inglés**</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100">
+                <h3 class="text-xl font-bold text-blue-950 mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-blue-600"></i> Seguridad
+                </h3>
+                <p class="text-sm text-gray-500 mb-4 font-medium italic">Tu tranquilidad es nuestra prioridad:</p>
+                <ul class="space-y-4 text-gray-600">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-video text-red-500 mt-1"></i>
+                        <span>Cámaras de seguridad en el exterior del alojamiento.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-key text-red-500 mt-1"></i>
+                        <span>Acceso privado y seguro al establecimiento.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100 lg:col-span-2">
+                <h3 class="text-xl font-bold text-blue-950 mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-utensils text-blue-600"></i> Cocina y Equipamiento
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-gray-600 text-sm">
+                    <span><i class="fa-solid fa-check text-green-500 mr-2"></i>Heladera</span>
+                    <span><i class="fa-solid fa-check text-green-500 mr-2"></i>Microondas</span>
+                    <span><i class="fa-solid fa-check text-green-500 mr-2"></i>Pava eléctrica</span>
+                    <span><i class="fa-solid fa-check text-green-500 mr-2"></i>Lavarropas</span>
+                    <span><i class="fa-solid fa-check text-green-500 mr-2"></i>Horno</span>
+                    <span><i class="fa-solid fa-check text-green-500 mr-2"></i>Utensilios</span>
+                    <span><i class="fa-solid fa-check text-green-500 mr-2"></i>Limpieza</span>
+                    <span><i class="fa-solid fa-check text-green-500 mr-2"></i>Asador</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100">
+                <h3 class="text-xl font-bold text-blue-950 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-wifi text-blue-600"></i> Conectividad
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    **53 Mbps de velocidad.** Testeado y apto para videollamadas y streaming en 4K sin interrupciones.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    </main>
+
+
+
+
+
+    
+    <footer>
+
+        
+                <div>
+            <h3>Empresa</h3>
+            <ul>
+                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="#">Conócenos más</a></li>
+                <li><a href="#">Teléfonos</a></li>
+                <li><a href="#">Sucursales</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Servicios</h3>
+            <ul>
+                <li><a href="#">Servicio especializado</a></li>
+                <li><a href="#">Hablar con un representante</a></li>
+                <li><a href="#">Solicitar vendedor</a></li>
+                <li><a href="#">Solicitar asistencia</a></li>
+                <li><a href="#">Condiciones</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Tienda en línea</h3>
+            <ul>
+                <li><a href="#">Nuestros destinos</a></li>
+                <li><a href="#">Promociones</a></li>
+                <li><a href="#">Como comprar</a></li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">Paga en línea</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Siguenos</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">X</a></li>
+                <li><a href="#">Linkedin</a></li>
+                <li><a href="#">GMail</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Dónde nos encontramos</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.1662485462293!2d-65.7699436245729!3d-28.47453956026489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942428ce7dc0d5a5%3A0x3fe785a4540fc551!2sAvellaneda%20y%20Tula%201122%2C%20K4700FRF%20San%20Fernando%20del%20Valle%20de%20Catamarca%2C%20Catamarca!5e0!3m2!1ses!2sar!4v1765933402652!5m2!1ses!2sar" width="240" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+</footer>
+
+
+
+
+
+
+
+       
+    
+
+
+    
+</body>
+</html>
