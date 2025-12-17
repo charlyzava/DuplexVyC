@@ -68,3 +68,13 @@
     color: #00d9ff;
 }
 
+/*Contenedor de las fotos*/
+.container-card{
+            border: 1px solid gray;
+            width: 80%;
+            margin: 0 auto;
+            display:grid;
+                grid-template-columns: repeat(auto-fill , minmax(260px,1fr ));
+                gap:10px
+
+        }

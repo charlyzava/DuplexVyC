@@ -12,6 +12,31 @@
         .shadow-text {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
+
+
+        /* Para lograr el efecto de mostrar foto */
+
+.modal-galeria {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .modal-galeria:target {
+        display: flex;
+        opacity: 1;
+    }
+    .nav-arrow {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        border-radius: 50%;
+        transition: all 0.3s;
+    }
+    .nav-arrow:hover { background: rgba(255, 255, 255, 0.3); transform: scale(1.1); }
+    
+    /* Suavizar el scroll al hacer clic en los enlaces internos */
+    html { scroll-behavior: smooth; }
+
+
     </style>
 
 <link rel="stylesheet" href="css/style.css">
@@ -61,45 +86,15 @@
             <div class="text-center max-w-3xl text-white flex flex-col items-center gap-8 py-10">
                 
                 <h1 class="text-4xl md:text-6xl font-bold shadow-text leading-tight">
-                   Confort y Relax en el corazón de Catamarca
+                   Siéntete como en casa desde el primer momento
                 </h1>
 
                 <p class="text-xl md:text-2xl shadow-text max-w-2xl">
-                    Ubicación privilegiada a pasos de la Terminal. Equipamiento completo, aire acondicionado en todos los ambientes, limpieza garantizada y cochera incluída.
+                    Explora nuestra galería y descubre los espacios diseñados para tu máximo confort y descanso.
                 </p>
 
 <div class="mt-8 w-full max-w-4xl">
-    <form action="tu-pagina-de-resultados.php" method="GET" class="bg-white/10 backdrop-blur-md p-4 rounded-xl lg:rounded-full shadow-2xl flex flex-col lg:flex-row items-center gap-4 border border-white/20">
-        
-        <div class="flex flex-col items-start w-full lg:w-1/4 px-4">
-            <label class="text-xs uppercase font-bold text-yellow-400 mb-1">Entrada</label>
-            <input type="date" name="checkin" required class="bg-transparent text-white w-full focus:outline-none [color-scheme:dark]">
-        </div>
 
-        <div class="hidden lg:block w-px h-10 bg-white/20"></div>
-
-        <div class="flex flex-col items-start w-full lg:w-1/4 px-4">
-            <label class="text-xs uppercase font-bold text-yellow-400 mb-1">Salida</label>
-            <input type="date" name="checkout" required class="bg-transparent text-white w-full focus:outline-none [color-scheme:dark]">
-        </div>
-
-        <div class="hidden lg:block w-px h-10 bg-white/20"></div>
-
-        <div class="flex flex-col items-start w-full lg:w-1/4 px-4">
-            <label class="text-xs uppercase font-bold text-yellow-400 mb-1">Personas</label>
-            <select name="huespedes" class="bg-transparent text-white w-full focus:outline-none appearance-none cursor-pointer">
-                <option value="1" class="text-blue-950">1 Persona</option>
-                <option value="2" class="text-blue-950">2 Personas</option>
-                <option value="3" class="text-blue-950">3 Personas</option>
-                <option value="4" class="text-blue-950">4 Personas</option>
-                <option value="5" class="text-blue-950">5 Personas</option>
-            </select>
-        </div>
-
-        <button type="submit" class="w-full lg:w-auto px-8 py-4 bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold text-sm rounded-full shadow-lg transform hover:scale-105 transition-all uppercase tracking-wider cursor-pointer whitespace-nowrap">
-            Ver disponibilidad
-        </button>
-    </form>
 </div>
 
             </div>
@@ -107,169 +102,288 @@
 
     </header>
     <main>
-        <!--opiniones de Clientes-->
-        <section class="py-20 bg-blue-950 text-white">
-    <div class="max-w-6xl mx-auto px-6">
+        <!--////////// Galeria /////////// -->
+
+<main class="bg-gray-50 py-10">
+    <div class="max-w-7xl mx-auto px-4">
+        <h1 class="text-4xl font-bold text-blue-950 text-center mb-12 variant">Nuestra Propiedad</h1>
+
+<!-- HABITACIONES -->
+
+        <section id="habitaciones" class="mb-16">
+            <h2 class="text-2xl font-bold text-yellow-500 mb-6 border-b-2 border-yellow-400 inline-block">Habitaciones</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="#hab1" class="group overflow-hidden rounded-xl shadow-md bg-white">
+                    <img src="galeria/habitaciones/01.jpeg" alt="Habitación Principal" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                <a href="#hab2" class="group overflow-hidden rounded-xl shadow-md bg-white">
+                    <img src="galeria/habitaciones/02.jpeg" alt="Habitación Secundaria" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                <a href="#hab2" class="group overflow-hidden rounded-xl shadow-md bg-white">
+                    <img src="galeria/habitaciones/03.jpeg" alt="Habitación Secundaria" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                <a href="#hab2" class="group overflow-hidden rounded-xl shadow-md bg-white">
+                    <img src="galeria/habitaciones/04.jpeg" alt="Habitación Secundaria" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                <a href="#hab2" class="group overflow-hidden rounded-xl shadow-md bg-white">
+                    <img src="galeria/habitaciones/05.jpeg" alt="Habitación Secundaria" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                <a href="#hab2" class="group overflow-hidden rounded-xl shadow-md bg-white">
+                    <img src="galeria/habitaciones/06.jpeg" alt="Habitación Secundaria" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </a>
+            </div>
+        </section>
+
+<!-- COCINA Y COMEDOR -->
+
+        <section id="cocina" class="mb-16">
+            <h2 class="text-2xl font-bold text-yellow-500 mb-6 border-b-2 border-yellow-400 inline-block">Cocina y Comedor</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                
+                                <a href="#comedor1" class="group overflow-hidden rounded-xl shadow-md bg-white">
+                    <img src="galeria/comedor/01.jpeg" alt="Cocina equipada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                                <a href="#comedor2" class="group overflow-hidden rounded-xl shadow-md bg-white">
+                    <img src="galeria/comedor/02.jpeg" alt="Cocina equipada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                                <a href="#comedor3" class="group overflow-hidden rounded-xl shadow-md bg-white">
+                    <img src="galeria/comedor/03.jpeg" alt="Cocina equipada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                                <a href="#comedor4" class="group overflow-hidden rounded-xl shadow-md bg-white">
+                    <img src="galeria/comedor/04.jpeg" alt="Cocina equipada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                                <a href="#comedor5" class="group overflow-hidden rounded-xl shadow-md bg-white">
+                    <img src="galeria/comedor/05.jpeg" alt="Cocina equipada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </a>                
+                
+                
+                <a href="#cocina1" class="group overflow-hidden rounded-xl shadow-md bg-white">
+                    <img src="galeria/cocina/01.jpeg" alt="Cocina equipada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                <a href="#cocina2" class="group overflow-hidden rounded-xl shadow-md bg-white">
+                    <img src="galeria/cocina/02.jpeg" alt="Cocina equipada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                <a href="#cocina3" class="group overflow-hidden rounded-xl shadow-md bg-white">
+                    <img src="galeria/cocina/03.jpeg" alt="Cocina equipada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </a>
+
+
+
+            </div>
+        </section>
+
         
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4">Lo que dicen nuestros huéspedes</h2>
-            <div class="w-24 h-1 bg-yellow-400 mx-auto"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-yellow-400/50 transition-colors shadow-xl">
-                <div class="flex items-center gap-4 mb-4">
-                    <img src="https://i.pravatar.cc/150?u=ana" alt="Ana" class="w-14 h-14 rounded-full border-2 border-yellow-400">
-                    <div>
-                        <h4 class="font-bold text-lg leading-tight">Roberto</h4>
-                        <p class="text-sm text-yellow-400">🇦🇷 Argentina</p>
-                    </div>
-                </div>
-                <p class="italic text-gray-300">
-                    "El departamento es muy cómodo, y la zona es tranquila.El lugar es tal cual sale en las fotos. La limpieza excelente. Muy completo. La atención de Carlos y Vanesa excelente. Muy atentos."
-                </p>
-                <div class="mt-4 text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
-            </div>
-
-            <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-yellow-400/50 transition-colors shadow-xl">
-                <div class="flex items-center gap-4 mb-4">
-                    <img src="https://i.pravatar.cc/150?u=carlos" alt="Carlos" class="w-14 h-14 rounded-full border-2 border-yellow-400">
-                    <div>
-                        <h4 class="font-bold text-lg leading-tight">Soledad</h4>
-                        <p class="text-sm text-yellow-400">🇨🇱 Chile</p>
-                    </div>
-                </div>
-                <p class="italic text-gray-300">
-                    "El depto estaba en perfectas condiciones, muy limpio y ordenado, cumplieron con todo lo que estaba en la descripción, los anfitriones muy amables, sin dudas volveria"
-                </p>
-                <div class="mt-4 text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
-            </div>
-            <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-yellow-400/50 transitishadow-xl">
-                <div class="flex items-center gap-4 mb-4">
-                    <img src="https://i.pravatar.cc/150?u=sophie" alt="Sophie" class="w-14 h-14 rounded-full border-2 border-yellow-400">
-                    <div>
-                        <h4 class="font-bold text-lg leading-tight">Sophie Müller</h4>
-                        <p class="text-sm text-yellow-400">🇩🇪 Alemania</p>
-                    </div>
-                </div>
-                <p class="italic text-gray-300">
-                    "Very clean and modern apartment. Perfect location in the city center. Having two bathrooms was a great advantage for our group."
-                </p>
-                <div class="mt-4 text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
-            </div>
-
-        </div>
+        
+        
+       <section id="banos" class="mb-16">
+    <h2 class="text-2xl font-bold text-yellow-500 mb-6 border-b-2 border-yellow-400 inline-block">Baños</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="#bano1" class="group overflow-hidden rounded-xl shadow-md bg-white">
+            <img src="galeria/banios/01.jpeg" alt="Baño 1" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+        </a>
+        <a href="#bano2" class="group overflow-hidden rounded-xl shadow-md bg-white">
+            <img src="galeria/banios/02.jpeg" alt="Baño 2" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+        </a>
+        <a href="#bano3" class="group overflow-hidden rounded-xl shadow-md bg-white">
+            <img src="galeria/banios/03.jpeg" alt="Baño 3" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+        </a>
+        <a href="#bano4" class="group overflow-hidden rounded-xl shadow-md bg-white">
+            <img src="galeria/banios/04.jpeg" alt="Baño 4" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+        </a>
+        <a href="#bano5" class="group overflow-hidden rounded-xl shadow-md bg-white">
+            <img src="galeria/banios/05.jpeg" alt="Baño 5" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+        </a>
     </div>
+</section>
 
 
 
-<!-- Acceso a comentarios reales de Booking -->
-<div class="text-center mt-12">
-<a href="https://www.booking.com/hotel/ar/duplex-temporal-vc.es.html#tab-reviews" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-[#003580] text-white font-bold rounded-lg hover:bg-[#00224f] transition-all shadow-md">        <span>Ver más opiniones en Booking.com</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
-    </a>
+
+
+    </div>
+</main>
+<!-- HABITACIONES GRANDE -->
+<div id="hab1" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#hab6" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/habitaciones/01.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#habitaciones" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#hab2" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
 </div>
 
-<!-- Fin Acceso a comentarios reales de Booking -->
-</section>
-
-
-<!-- PORQUE ELEGIRNOS - SERVICIOS -->
-<section class="py-20 bg-gray-50 text-blue-950">
-    <div class="max-w-6xl mx-auto px-6">
-        
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4">¿Por qué elegir <span class="text-blue-600">DúplexVyC</span>?</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto italic">Nos esforzamos por ofrecerte la mejor experiencia en Catamarca, cuidando cada detalle de tu estadía.</p>
-            <div class="w-24 h-1 bg-yellow-400 mx-auto mt-4"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow border-t-4 border-blue-500">
-                <div class="text-blue-500 mb-4">
-                    <i class="fa-solid fa-wind text-4xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Climatización Total</h3>
-                <p class="text-gray-600 text-sm">Contamos con aire acondicionado en **todas las habitaciones y en la cocina**, para que el calor de Catamarca no sea un problema.</p>
-            </div>
-
-            <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow border-t-4 border-yellow-400">
-                <div class="text-yellow-500 mb-4">
-                    <i class="fa-solid fa-bed text-4xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Máximo Confort</h3>
-                <p class="text-gray-600 text-sm">Nuestras camas cuentan con colchones de alta calidad y sábanas premium para garantizarte un descanso reparador.</p>
-            </div>
-
-            <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow border-t-4 border-blue-500">
-                <div class="text-blue-500 mb-4">
-                    <i class="fa-solid fa-wifi text-4xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Wi-Fi de Alta Velocidad</h3>
-                <p class="text-gray-600 text-sm">Internet de fibra óptica estable en todo el dúplex. Ideal para teletrabajo o streaming en 4K.</p>
-            </div>
-
-            <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow border-t-4 border-yellow-400">
-                <div class="text-yellow-500 mb-4">
-                    <i class="fa-solid fa-sparkles text-4xl"></i> <i class="fa-solid fa-hand-sparkles text-4xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Limpieza Impecable</h3>
-                <p class="text-gray-600 text-sm">Protocolos de higiene rigurosos. Entregamos el alojamiento en perfectas condiciones de desinfección y orden.</p>
-            </div>
-
-            <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow border-t-4 border-blue-500">
-                <div class="text-blue-500 mb-4">
-                    <i class="fa-solid fa-car text-4xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Garage Privado</h3>
-                <p class="text-gray-600 text-sm">Cochera techada dentro del predio para que tu vehículo esté seguro y protegido del sol y el clima.</p>
-            </div>
-
-            <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow border-t-4 border-yellow-400">
-                <div class="text-yellow-500 mb-4">
-                    <i class="fa-solid fa-map-location-dot text-4xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Ubicación Estratégica</h3>
-                <p class="text-gray-600 text-sm">A pocos metros de la Terminal y sobre Av. Güemes. Todo lo que necesitas está a un paso de distancia.</p>
-            </div>
-
-        </div>
+<div id="hab2" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#hab1" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/habitaciones/02.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#habitaciones" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
     </div>
-</section>
+    <a href="#hab3" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
 
-
-
-<section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-blue-950">Galería del Dúplex</h2>
-            <div class="w-16 h-1 bg-blue-600 mx-auto mt-4"></div>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="col-span-2 row-span-2 overflow-hidden rounded-2xl shadow-lg">
-                <img src="img/fachada01.jpg" alt="Fachada" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer">
-            </div>
-            <div class="overflow-hidden rounded-2xl shadow-lg">
-                <img src="tu-foto-cocina.jpg" alt="Cocina" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-500 cursor-pointer">
-            </div>
-            <div class="overflow-hidden rounded-2xl shadow-lg">
-                <img src="img/hab02.jpg" alt="Habitación" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-500 cursor-pointer">
-            </div>
-            <div class="overflow-hidden rounded-2xl shadow-lg">
-                <img src="img/banio02.jpg" alt="Baño" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-500 cursor-pointer">
-            </div>
-            <div class="overflow-hidden rounded-2xl shadow-lg">
-                <img src="tu-foto-garage.jpg" alt="Garage" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-500 cursor-pointer">
-            </div>
-        </div>
+<div id="hab3" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#hab2" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/habitaciones/03.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#habitaciones" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
     </div>
-</section>
+    <a href="#hab4" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
 
+<div id="hab4" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#hab3" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/habitaciones/04.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#habitaciones" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#hab5" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<div id="hab5" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#hab4" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/habitaciones/05.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#habitaciones" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#hab6" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<div id="hab6" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#hab5" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/habitaciones/06.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#habitaciones" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#hab1" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+
+
+
+
+<!-- COCINA COMEDOR GRANDE -->
+
+<div id="comedor1" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#comedor5" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/comedor/01.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#cocina" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#comedor2" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<div id="comedor2" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#comedor1" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/comedor/02.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#cocina" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#comedor3" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<div id="comedor3" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#comedor2" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/comedor/03.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#cocina" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#comedor4" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<div id="comedor4" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#comedor3" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/comedor/04.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#cocina" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#comedor5" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<div id="comedor5" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#comedor4" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/comedor/05.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#cocina" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#cocina1" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+
+
+
+<div id="cocina1" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#comedor5" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/cocina/01.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#cocina" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#cocina2" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<div id="cocina2" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#cocina1" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/cocina/02.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#cocina" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#cocina3" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<div id="cocina3" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#cocina2" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/cocina/03.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#cocina" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#comedor1" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+
+<div id="bano1" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#bano5" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/banios/01.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#banos" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#bano2" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<div id="bano2" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#bano1" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/banios/02.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#banos" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#bano3" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<div id="bano3" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#bano2" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/banios/03.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#banos" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#bano4" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<div id="bano4" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#bano3" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/banios/04.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#banos" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#bano5" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<div id="bano5" class="modal-galeria fixed inset-0 z-[100] bg-black/95 items-center justify-between p-4 hidden target:flex">
+    <a href="#bano4" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="flex flex-col items-center">
+        <img src="galeria/banios/05.jpeg" class="max-w-full max-h-[80vh] rounded-lg">
+        <a href="#banos" class="mt-4 text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Cerrar</a>
+    </div>
+    <a href="#bano1" class="nav-arrow text-white text-3xl"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
 
     </main>
 
